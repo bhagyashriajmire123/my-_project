@@ -70,3 +70,7 @@ def contact(request):
 
     form = ContactForm()
     return render(request, "contact.html", {'form': form})
+
+
+class Student(models.model):
+    name = models.charname(max_lenght = 500)
