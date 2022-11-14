@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include "messages.html" %}
+
+{% if user.is_authenticated %}
+    Hi{{ user.username }}!
+{% else %}
+   <p> You are not logged in </p>
+   <a href="{% url '/home' %}"> Log In </a>
+   <a href="{% url 'logout_user' %}"> logout</a>
+   
+
+{% endif %}
+{% endblock %}
