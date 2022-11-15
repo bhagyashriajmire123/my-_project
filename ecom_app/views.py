@@ -82,3 +82,8 @@ def register_func(request):
         pass
     else :
         return HttpResponse(request, "not valid data...!")
+def login_user(request):
+    user = request.post["username"]
+    password = request.post["password"]
+    user = authenticate(user,password)
+    return HttpResponse(request, "loginsucessfully ....!")
