@@ -76,14 +76,11 @@ class Student(models.model):
     name = models.charname(max_lenght = 500)
 
 
+def demo(request):
+    if request.method == "POST":
+        print("post")
+    else:
+        request.method == "GET"
+        username = request.method.get(username)
 
-def register_func(request):
-    if method.request == "POST":
-        pass
-    else :
-        return HttpResponse(request, "not valid data...!")
-def login_user(request):
-    user = request.post["username"]
-    password = request.post["password"]
-    user = authenticate(user,password)
-    return HttpResponse(request, "loginsucessfully ....!")
+        return HttpResponse("data sucessfully inside...!")
