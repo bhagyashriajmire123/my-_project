@@ -74,3 +74,11 @@ def contact(request):
 
 class Student(models.model):
     name = models.charname(max_lenght = 500)
+
+
+
+def register_func(request):
+    if method.request == "POST":
+        pass
+    else :
+        return HttpResponse(request, "not valid data...!")
